@@ -105,4 +105,19 @@
     _display.text = [_display.text stringByAppendingString:@"."];
 }
 
+- (IBAction)touchPlusMinButton:(UIButton *)sender {
+    _register1 *= -1;
+    _display.text = [NSString stringWithFormat:@"%g", _register1];
+}
+
+- (IBAction)touchPercentButton:(UIButton *)sender {
+    if (!_operation) {
+        _register1 *= 0.01;
+        _display.text = [NSString stringWithFormat:@"%g", _register1];
+    } else {
+        _register2 *= 0.01;
+        _display.text = [NSString stringWithFormat:@"%g", _register2];
+    }
+}
+
 @end
