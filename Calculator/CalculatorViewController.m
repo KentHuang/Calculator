@@ -69,12 +69,6 @@
 }
 
 - (void)eval {
-    
-//    NSLog(@"%f", _register1);
-//    NSLog(@"%f", _register2);
-//    NSLog(@"%f", _register3);
-//    NSLog(@"%f", _tens);
-    
     if ([_operation isEqualToString:@"/"]) {
         _register1 = _register1 / _register2;
         _display.text = [NSString stringWithFormat:@"%g", _register1];
@@ -90,7 +84,6 @@
     } else {
         
     }
-    NSLog(@"%f", _register1);
 }
 
 - (IBAction)touchClearButton:(UIButton *)sender {
