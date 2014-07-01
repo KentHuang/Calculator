@@ -102,7 +102,11 @@
 
 - (IBAction)touchDotButton:(UIButton *)sender {
     _dot = YES;
-    _display.text = [_display.text stringByAppendingString:@"."];
+    if (_register1 && !_register2 && _operation) {
+        _display.text = @"0.";
+    } else {
+        _display.text = [_display.text stringByAppendingString:@"."];
+    }
 }
 
 - (IBAction)touchPlusMinButton:(UIButton *)sender {
